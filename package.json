@@ -11,6 +11,7 @@
     "silverstripe",
     "docker"
   ],
+  "bin": "./cli.js",
   "author": "Matthias Leutenegger",
   "license": "BSD-3-Clause",
   "dependencies": {
