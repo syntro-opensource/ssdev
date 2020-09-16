@@ -15,6 +15,7 @@
   "author": "Matthias Leutenegger",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "docker-compose": "^0.23.5",
     "yargs": "^16.0.3"
   }
 }
