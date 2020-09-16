@@ -1,0 +1,19 @@
+{
+  "name": "ssdev",
+  "version": "1.0.0",
+  "description": "docker-based devenv manager for silverstripe projects using npx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npx",
+    "silverstripe",
+    "docker"
+  ],
+  "author": "Matthias Leutenegger",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "yargs": "^16.0.3"
+  }
+}
