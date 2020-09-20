@@ -54,7 +54,7 @@ module.exports = (args) => {
             },
             composer: {
                 image: 'composer',
-                restart: 'no',
+                // restart: 'no',
                 working_dir: '/var/www/html',
                 user: "${UID}",
                 volumes: [{
