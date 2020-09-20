@@ -12,6 +12,7 @@ module.exports = (args) => {
         services: {
             host: {
                 image: args['image-host'],
+                user: "${UID}",
                 environment: {
                     "SS_DEFAULT_ADMIN_USERNAME": "admin",
                     "SS_DEFAULT_ADMIN_PASSWORD": "admin",
@@ -51,6 +52,17 @@ module.exports = (args) => {
                     "--default-authentication-plugin=mysql_native_password"
                 ]
             },
+            composer: {
+                image: 'composer',
+                restart: 'no',
+                working_dir: '/var/www/html',
+                user: "${UID}",
+                volumes: [{
+                    "type": "volume",
+                    "source": "host_data",
+                    "target": "/var/www/html"
+                }]
+            }
         },
         volumes: getVolumeDefinition(args)
     }
