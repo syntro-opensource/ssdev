@@ -1,9 +1,0 @@
-version: "3.7"
-services:
-    host:
-        depends_on:
-            - test
-    test:
-        image: containous/whoami
-        ports:
-            - 8080:80
