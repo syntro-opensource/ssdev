@@ -12,7 +12,7 @@ module.exports = (args) => {
         services: {
             host: {
                 image: args['image-host'],
-                user: "${USER}:${USER}",
+                // user: "${USER}:${USER}",
                 environment: {
                     "SS_DEFAULT_ADMIN_USERNAME": "admin",
                     "SS_DEFAULT_ADMIN_PASSWORD": "admin",
@@ -56,7 +56,7 @@ module.exports = (args) => {
                 image: 'composer',
                 // restart: 'no',
                 working_dir: '/var/www/html',
-                user: "${USER}:${USER}",
+                // user: "${USER}:${USER}",
                 volumes: [{
                     "type": "volume",
                     "source": "host_data",
