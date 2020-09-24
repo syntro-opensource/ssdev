@@ -24,6 +24,7 @@ async function withComposeConfig(args, callback) {
     const rootComposeFile = getRootComposeFile(args);
     const config = getComposeConfig(args, rootComposeFile);
     await callback(config).catch((error) => {
+        console.log(error);
         console.log('\nThere was an error. You can find more information in the output above \n');
     });
     rootComposeFile.removeCallback();

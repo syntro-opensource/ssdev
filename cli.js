@@ -88,7 +88,22 @@ require('yargs') // eslint-disable-line
         if (argv.verbose) console.info(`running command in: ${argv.container}`)
         commands.exec(argv);
     })
-    // execute a command inside the host container
+    // Initialize a new project
+    .command('init [path]', 'create a new project using a silverstripe recipe in a new directory', (yargs) => {
+        yargs.option('recipe',{
+            alias: 'r',
+            describe: 'specify the recipe to be used',
+            default: 'syntro/ssto:^1',
+            type: 'string'
+        })
+        yargs.positional('path', {
+            describe: 'where to place the project',
+            type: 'string'
+        })
+    }, (argv) => {
+        commands.init(argv);
+    })
+    // print the generated compose config
     .command('print', 'Print the generated docker-compose config for use in a file', (yargs) => {}, (argv) => {
         commands.print(argv);
     })

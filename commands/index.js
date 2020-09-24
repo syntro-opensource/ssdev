@@ -40,5 +40,21 @@ module.exports = {
     print: (args) => {
         var compose = getDefaultComposeContent(args)
         console.info(YAML.stringify(compose));
-    }
+    },
+    init: (args) => {
+        withComposeConfig(args, async (config) => {
+            var commandOptions = config.commandOptions || [];
+            config.commandOptions = [...commandOptions];
+            config.commandOptions.push('--rm');
+            await compose.run('composer',[
+                'create-project',
+                '--ignore-platform-reqs',
+                args['recipe'],
+                args['path']
+            ], config);
+            config.commandOptions = [...commandOptions];
+            config.commandOptions.push('--volumes');
+            return compose.down(config);
+        });
+    },
 }
