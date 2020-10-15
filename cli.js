@@ -93,7 +93,7 @@ require('yargs') // eslint-disable-line
         commands.run(argv);
     })
     // Initialize a new project
-    .command('init [path]', 'create a new project using a silverstripe recipe in a new directory', (yargs) => {
+    .command('init <path>', 'create a new project using a silverstripe recipe in a new directory', (yargs) => {
         yargs.option('recipe',{
             alias: 'r',
             describe: 'specify the recipe to be used',
