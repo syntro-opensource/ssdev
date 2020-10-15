@@ -9,7 +9,7 @@ const process = require('process');
 function hostUser(args) {
     user = {};
     if (os.platform() != 'darwin' && os.platform() != 'win32') {
-        user.user = process.getuid();
+        user.user = String(process.getuid());
     }
     return user;
 }
