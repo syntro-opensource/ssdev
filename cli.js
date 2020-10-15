@@ -44,7 +44,7 @@ require('yargs') // eslint-disable-line
     .option('ports-db', {
         type: 'array',
         description: 'Ports to publish from the database container',
-        default: ['80']
+        default: ['3306']
     })
     // Serve the devenv
     .command('serve', 'start the devenv', (yargs) => {
