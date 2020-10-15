@@ -3,7 +3,8 @@ const tmp = require('tmp');
 const withComposeConfig = require('../docker/withComposeConfig');
 const YAML = require('yaml');
 const getDefaultComposeContent = require('../docker/getRootComposeFile/defaultComposeContent');
-
+const { execSync } = require("child_process");
+const os = require('os');
 
 module.exports = {
     /**
@@ -41,20 +42,31 @@ module.exports = {
         var compose = getDefaultComposeContent(args)
         console.info(YAML.stringify(compose));
     },
+    /**
+     * initializes a new project using composer
+     */
     init: (args) => {
-        withComposeConfig(args, async (config) => {
-            var commandOptions = config.commandOptions || [];
-            config.commandOptions = [...commandOptions];
-            config.commandOptions.push('--rm');
-            await compose.run('composer',[
-                'create-project',
-                '--ignore-platform-reqs',
-                args['recipe'],
-                args['path']
-            ], config);
-            config.commandOptions = [...commandOptions];
-            config.commandOptions.push('--volumes');
-            return compose.down(config);
-        });
+        var command = [
+            'docker',
+            'run',
+            '--rm',
+            '-t',
+            '-v $PWD:/app'
+        ];
+        if (os.platform() != 'darwin' && os.platform() != 'win32') {
+            command = [
+                ...command,
+                '-u $(id -u ${USER}):$(id -g ${USER})'
+            ];
+        }
+        command = [
+            ...command,
+            'composer',
+            'create-project',
+            '--ignore-platform-reqs --no-interaction',
+            args['recipe'],
+            args['path']
+        ];
+        execSync(command.join(' '),{ stdio: 'inherit' });
     },
 }
