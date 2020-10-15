@@ -117,4 +117,5 @@ require('yargs') // eslint-disable-line
     })
     .strict(true)
     .help('help')
+    .demandCommand()
     .argv
