@@ -16,7 +16,7 @@ module.exports = (args) => {
             host: {
                 image: args['image-host'],
                 ...hostEnv(args),
-                ...hostUser(args),
+                // ...hostUser(args),
                 ...hostVolumes(args),
                 ports: args['ports-host'],
                 depends_on: [
@@ -46,7 +46,7 @@ module.exports = (args) => {
                 image: 'composer',
                 // restart: 'no',
                 working_dir: '/var/www/html',
-                // user: "${USER}:${USER}",
+                ...hostUser(args),
                 volumes: [{
                     "type": "volume",
                     "source": "host_data",
