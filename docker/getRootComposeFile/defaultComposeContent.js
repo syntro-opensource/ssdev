@@ -1,5 +1,8 @@
-const os = require('os');
 
+const volumeDefinition = require('./volumeDefinition');
+const hostVolumes = require('./hostVolumes');
+const hostUser = require('./hostUser');
+const hostEnv = require('./hostEnv');
 
 /**
  * This is the default definition of the compose file generated for hosting
@@ -12,22 +15,9 @@ module.exports = (args) => {
         services: {
             host: {
                 image: args['image-host'],
-                // user: "${USER}:${USER}",
-                environment: {
-                    "SS_DEFAULT_ADMIN_USERNAME": "admin",
-                    "SS_DEFAULT_ADMIN_PASSWORD": "admin",
-                    "SS_DATABASE_SERVER": "database",
-                    "SS_DATABASE_NAME": "ss_default",
-                    "SS_DATABASE_USERNAME": "root",
-                    "SS_DATABASE_PASSWORD": "silverstripe",
-                    "SS_ENVIRONMENT_TYPE": args['ss-env-type'],
-                    "TZ": args['tz']
-                },
-                volumes: [{
-                    "type": "volume",
-                    "source": "host_data",
-                    "target": "/var/www/html"
-                }],
+                ...hostEnv(args),
+                ...hostUser(args),
+                ...hostVolumes(args),
                 ports: args['ports-host'],
                 depends_on: [
                     "database"
@@ -64,41 +54,6 @@ module.exports = (args) => {
                 }]
             }
         },
-        volumes: getVolumeDefinition(args)
+        ...volumeDefinition(args)
     }
-}
-
-
-/**
- * getVolumeDefinition - returns the volume definition as needed in the
- * 'volumes' key in the docker-compose definition.
- *
- * the host volume is
- *
- * @param  {type} args description
- * @return {type}      description
- */
-function getVolumeDefinition(args) {
-    var definition = {
-        db_data: null,
-        host_data: {
-            driver: 'local',
-            driver_opts: {
-                type: 'none',
-                o: 'bind',
-                device: "${PWD}"
-            }
-        }
-    }
-    if (os.platform() == 'darwin' || os.platform() == 'win32') {
-        definition.host_data = {
-            driver: 'local',
-            driver_opts: {
-                type: 'nfs',
-                o: 'addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3',
-                device: ":${PWD}"
-            }
-        }
-    }
-    return definition
 }
