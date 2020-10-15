@@ -33,9 +33,9 @@ module.exports = {
             return compose.pullAll(config);
         });
     },
-    exec: (args) => {
+    run: (args) => {
         withComposeConfig(args, (config) => {
-            return compose.exec(args.container, args['--'], config);
+            return compose.run(args.container, args['--'], config);
         });
     },
     print: (args) => {
