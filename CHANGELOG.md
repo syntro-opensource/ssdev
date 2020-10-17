@@ -2,6 +2,19 @@
 ## [Unreleased]
 
 
+<a name="1.0.0"></a>
+## [1.0.0] - 2020-10-17
+### 🍰 Added
+- jest and tests for os specific parts (more tests needed later) ([#4](https://github.com/syntro-opensource/ssdev/issues/4))
+- more badges
+- linting workflow ([#3](https://github.com/syntro-opensource/ssdev/issues/3))
+- License
+
+### 🔧 Changed
+- readme now contains information
+- improve command file structure
+
+
 <a name="0.3.0"></a>
 ## [0.3.0] - 2020-10-15
 ### 🐞 Fixed
@@ -27,6 +40,7 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/0.3.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/syntro-opensource/ssdev/compare/0.3.0...1.0.0
 [0.3.0]: https://github.com/syntro-opensource/ssdev/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/syntro-opensource/ssdev/compare/0.1.0...0.2.0
