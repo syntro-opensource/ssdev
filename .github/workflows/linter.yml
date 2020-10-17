@@ -12,4 +12,4 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
-    - run: npx eslint **/**.js **.js --max-warnings=0
+    - run: npx eslint ./ --max-warnings=0
