@@ -1,0 +1,4 @@
+extends:
+    - "@syntro-opensource/eslint-config-base"
+env:
+  node: true
