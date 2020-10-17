@@ -1,5 +1,4 @@
 const compose = require('docker-compose');
-const tmp = require('tmp');
 const YAML = require('yaml');
 const withComposeConfig = require('../docker/withComposeConfig');
 const getDefaultComposeContent = require('../docker/getRootComposeFile/defaultComposeContent');
@@ -18,9 +17,13 @@ module.exports = {
   down: async (args) => {
     withComposeConfig(args, (config) => {
       if (args.volumes) {
-        const commandOptions = config.commandOptions || [];
-        commandOptions.push('--volumes');
-        config.commandOptions = commandOptions;
+        return compose.down({
+          ...config,
+          commandOptions: [
+            ...config.commandOptions,
+            '--volumes',
+          ],
+        });
       }
       return compose.down(config);
     });
@@ -32,8 +35,8 @@ module.exports = {
     withComposeConfig(args, (config) => compose.run(args.container, args['--'], config));
   },
   print: (args) => {
-    const compose = getDefaultComposeContent(args);
-    console.info(YAML.stringify(compose));
+    const composeFileContent = getDefaultComposeContent(args);
+    console.info(YAML.stringify(composeFileContent)); // eslint-disable-line no-console
   },
   /**
      * initializes a new project using composer
