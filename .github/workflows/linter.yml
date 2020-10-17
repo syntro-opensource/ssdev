@@ -1,8 +1,9 @@
-name: eslint
+name: Tests
 on:
   - push
 jobs:
   lint:
+    name: 🔮 Lint
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,3 +14,15 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
     - run: npx eslint ./ --max-warnings=0
+  jest:
+    name: 🤹‍♂️ Jest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Setup .npmrc file to publish to npm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+    - run: npm install
+    - run: npx jest
