@@ -21,13 +21,13 @@ const getComposeConfig = require('./getComposeConfig');
  * @param  {commandCallback} callback the function executed with the generated config
  */
 async function withComposeConfig(args, callback) {
-    const rootComposeFile = getRootComposeFile(args);
-    const config = getComposeConfig(args, rootComposeFile);
-    await callback(config).catch((error) => {
-        console.log(error);
-        console.log('\nThere was an error. You can find more information in the output above \n');
-    });
-    rootComposeFile.removeCallback();
+  const rootComposeFile = getRootComposeFile(args);
+  const config = getComposeConfig(args, rootComposeFile);
+  await callback(config).catch((error) => {
+    console.log(error);
+    console.log('\nThere was an error. You can find more information in the output above \n');
+  });
+  rootComposeFile.removeCallback();
 }
 
 module.exports = withComposeConfig;
