@@ -7,21 +7,21 @@ const os = require('os');
  * @param  {object} args the arguments from the cli
  * @return {object}      the volume list with the 'volumes' key
  */
-function hostVolumes(args) {
-    volumes = {
-        volumes: [{
-            "type": "volume",
-            "source": "host_data",
-            "target": "/var/www/html"
-        }],
-    };
-    if (os.platform() != 'darwin' && os.platform() != 'win32') {
-        volumes.volumes = [
-            ...volumes.volumes,
-            '/etc/passwd:/etc/passwd:ro'
-        ]
-    }
-    return volumes;
+function hostVolumes(args) { // eslint-disable-line no-unused-vars
+  const volumes = {
+    volumes: [{
+      type: 'volume',
+      source: 'host_data',
+      target: '/var/www/html',
+    }],
+  };
+  if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
+    volumes.volumes = [
+      ...volumes.volumes,
+      '/etc/passwd:/etc/passwd:ro',
+    ];
+  }
+  return volumes;
 }
 
 module.exports = hostVolumes;
