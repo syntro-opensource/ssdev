@@ -7,16 +7,6 @@
 
 Welcome to the repository of the `ssdev` tool!
 
-`ssdev` is the culmination of several attempts to simplify development of
-Silverstripe-based websites or -applications. The primary goals were:
-
-* Minimal requirements (-> no managing a complete LAMP VM on the developer PC)
-* Maximal flexibility (-> enable dependencies like Elasticsearch out of the box)
-* Maximal portability
-
-Out of several implementations, `ssdev` was born. Please read this readme to get
-started!
-
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [What is `ssdev`?](#what-is-ssdev)
@@ -33,7 +23,20 @@ started!
 
 <!-- /TOC -->
 
+
+
+
+
 ## What is `ssdev`?
+`ssdev` is the culmination of several attempts to simplify development of
+Silverstripe-based websites or -applications. The primary goals were:
+
+* Minimal requirements (-> no managing a complete LAMP VM on the developer PC)
+* Maximal flexibility (-> enable dependencies like Elasticsearch out of the box)
+* Maximal portability
+
+Out of several implementations, `ssdev` was born. Please read this readme to get
+started!
 `ssdev` is a javascript based utility, which can be installed locally
 or used anywhere with the [npx](https://github.com/npm/npx#readme) executor.
 
