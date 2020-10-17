@@ -1,3 +1,4 @@
+/* eslint-disable */
 const hostEnv = require('./hostEnv')
 const os = require('os');
 
