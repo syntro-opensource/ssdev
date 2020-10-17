@@ -7,8 +7,8 @@ os.userInfo.mockReturnValue({username: 'ubuntu'});
 os.platform.mockReturnValue('linux');
 
 const args = {
-  'ss-env-type': 'dev',
-  'tz': 'Europe/Zurich'
+  'ss-env-type': 'live',
+  'tz': 'Europe/Berlin'
 };
 
 
@@ -55,13 +55,13 @@ test('contains database password', () => {
 test('contains environment type', () => {
   var envVars = hostEnv(args).environment;
   expect('SS_ENVIRONMENT_TYPE' in envVars).toBeTruthy();
-  expect(envVars.SS_ENVIRONMENT_TYPE).toBe('dev');
+  expect(envVars.SS_ENVIRONMENT_TYPE).toBe('live');
 });
 
 test('contains timezone', () => {
   const envVars = hostEnv(args).environment;
   expect('TZ' in envVars).toBeTruthy();
-  expect(envVars.TZ).toBe('Europe/Zurich');
+  expect(envVars.TZ).toBe('Europe/Berlin');
 });
 
 test('contains apache user on linux', () => {
