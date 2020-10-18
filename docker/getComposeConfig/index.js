@@ -20,6 +20,7 @@ function getComposeConfig(args, rootComposeFile) {
     composeOptions: [
       ['--project-directory', path.join(process.cwd())],
     ],
+    commandOptions: [],
   };
   if (fs.existsSync(path.join(process.cwd(), 'docker-compose.yml'))) {
     options.config.push(path.join(process.cwd(), 'docker-compose.yml'));
