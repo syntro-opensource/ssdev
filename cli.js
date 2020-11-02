@@ -91,6 +91,31 @@ require('yargs') // eslint-disable-line
       commands.run(argv);
     },
   )
+  // execute a command inside the host container
+  .command(
+    'exec [container]',
+    'exec a command in the desired service container ("host" by default). use like so: "ssdev exec composer -- require silverstripe/framework"',
+    (yargs) => {
+      yargs
+        .positional('container', {
+          describe: 'the service name to execute the command in',
+          default: 'host',
+          type: 'string',
+        })
+        .option('--', {
+          describe: 'the command to run',
+        })
+        .demandOption('--', 'Please provide a command using "--"')
+      // .array('command')
+        .parserConfiguration({
+        // 'unknown-options-as-args': true,
+          'populate--': true,
+        });
+    },
+    (argv) => {
+      commands.exec(argv);
+    },
+  )
 // Initialize a new project
   .command(
     'init <path>',
