@@ -3,6 +3,7 @@ const serve = require('./serve');
 const down = require('./down');
 const pull = require('./pull');
 const run = require('./run');
+const exec = require('./exec');
 const print = require('./print');
 
 module.exports = {
@@ -10,6 +11,7 @@ module.exports = {
   down,
   pull,
   run,
+  exec,
   print,
   init,
 };

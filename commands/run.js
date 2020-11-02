@@ -8,6 +8,9 @@ const withComposeConfig = require('../docker/withComposeConfig');
  * @return {void}
  */
 function run(args) {
-  withComposeConfig(args, (config) => compose.run(args.container, args['--'], config));
+  withComposeConfig(args, (config) => {
+    config.commandOptions.push('--rm');
+    return compose.run(args.container, args['--'], config);
+  });
 }
 module.exports = run;
