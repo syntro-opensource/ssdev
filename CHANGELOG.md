@@ -2,6 +2,14 @@
 ## [Unreleased]
 
 
+<a name="1.0.2"></a>
+## [1.0.2] - 2020-11-02
+### 🍰 Added
+- Exec command ([#10](https://github.com/syntro-opensource/ssdev/issues/10))
+
+### 🔧 Changed
+- run now removes container again
+
 
 <a name="1.0.1"></a>
 ## [1.0.1] - 2020-10-18
@@ -50,7 +58,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/syntro-opensource/ssdev/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/syntro-opensource/ssdev/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/syntro-opensource/ssdev/compare/0.3.0...1.0.0
 [0.3.0]: https://github.com/syntro-opensource/ssdev/compare/0.2.0...0.3.0
