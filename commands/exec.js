@@ -8,8 +8,6 @@ const withComposeConfig = require('../docker/withComposeConfig');
  * @return {void}
  */
 function exec(args) {
-  withComposeConfig(args, (config) => {
-    return compose.exec(args.container, args['--'], config)
-  });
+  withComposeConfig(args, (config) => compose.exec(args.container, args['--'], config));
 }
 module.exports = exec;
