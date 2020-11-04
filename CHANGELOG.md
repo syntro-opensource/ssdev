@@ -2,6 +2,13 @@
 ## [Unreleased]
 
 
+<a name="1.0.3"></a>
+## [1.0.3] - 2020-11-04
+### 🐞 Fixed
+- error is handled
+- Database exposes port correctly
+
+
 <a name="1.0.2"></a>
 ## [1.0.2] - 2020-11-02
 ### 🍰 Added
@@ -58,7 +65,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.2...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.3...HEAD
+[1.0.3]: https://github.com/syntro-opensource/ssdev/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/syntro-opensource/ssdev/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/syntro-opensource/ssdev/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/syntro-opensource/ssdev/compare/0.3.0...1.0.0
