@@ -4,7 +4,11 @@
   "description": "docker-based devenv manager for silverstripe projects using npx",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "preversion": "git fetch",
+    "version": "git-chglog -o CHANGELOG.md --next-tag $npm_config_next && git add -A",
+    "postversion": "git add -A",
+    "release": "[[ ! -z $npm_config_next ]] && npm version $npm_config_next --git-tag-version=false"
   },
   "keywords": [
     "npx",
