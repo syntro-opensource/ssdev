@@ -2,6 +2,20 @@
 ## [Unreleased]
 
 
+<a name="1.1.0"></a>
+## [1.1.0] - 2020-12-03
+### 🍰 Added
+- release scripting
+- `build` command ([#15](https://github.com/syntro-opensource/ssdev/issues/15))
+
+### 🔧 Changed
+- specify total downloads in readme
+
+### 🧬 Dependencies
+- eslint from 7.13.0 to 7.14.0 ([#17](https://github.com/syntro-opensource/ssdev/issues/17))
+- yargs from 16.1.0 to 16.1.1 ([#14](https://github.com/syntro-opensource/ssdev/issues/14))
+
+
 <a name="1.0.3"></a>
 ## [1.0.3] - 2020-11-04
 ### 🐞 Fixed
@@ -65,7 +79,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.0.3...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/syntro-opensource/ssdev/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/syntro-opensource/ssdev/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/syntro-opensource/ssdev/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/syntro-opensource/ssdev/compare/1.0.0...1.0.1
