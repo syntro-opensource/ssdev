@@ -66,6 +66,15 @@ require('yargs') // eslint-disable-line
       commands.pull(argv);
     },
   )
+// build
+.command(
+  'build',
+  'build new versions of all containers which require build',
+  (yargs) => {}, // eslint-disable-line no-unused-vars
+  (argv) => {
+    commands.build(argv);
+  },
+)
 // execute a command inside the host container
   .command(
     'run [container]',
