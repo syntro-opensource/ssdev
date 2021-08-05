@@ -22,7 +22,7 @@
     "docker-compose": "^0.23.5",
     "tmp": "^0.2.1",
     "yaml": "^1.10.0",
-    "yargs": "^16.0.3"
+    "yargs": "^17.1.0"
   },
   "devDependencies": {
     "@syntro-opensource/eslint-config-base": "^1.0.2",
