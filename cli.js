@@ -135,6 +135,9 @@ require('yargs') // eslint-disable-line
         describe: 'specify the recipe to be used',
         default: 'syntro/ssto:^1',
         type: 'string',
+      }).option('ignore-platform-reqs', {
+        type: 'boolean',
+        description: 'If set, the flag is added to the composer commant. Use of this flag is discouraged, use the composer "config.platform" key.',
       });
       yargs.positional('path', {
         describe: 'where to place the project',

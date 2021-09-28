@@ -25,7 +25,16 @@ function init(args) {
     ...command,
     'composer',
     'create-project',
-    '--ignore-platform-reqs --no-interaction',
+    '--no-interaction',
+  ];
+  if (args['ignore-platform-reqs']) {
+    command = [
+      ...command,
+      '--ignore-platform-reqs',
+    ];
+  }
+  command = [
+    ...command,
     args.recipe,
     args.path,
   ];
