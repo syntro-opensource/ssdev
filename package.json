@@ -21,7 +21,7 @@
   "dependencies": {
     "docker-compose": "^0.23.5",
     "tmp": "^0.2.1",
-    "yaml": "^1.10.0",
+    "yaml": "^2.1.0",
     "yargs": "^16.0.3"
   },
   "devDependencies": {
