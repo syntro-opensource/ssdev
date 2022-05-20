@@ -14,8 +14,7 @@ or WAMP stack and start developing awesome websites and applications!
 > To find bugs or problems on other systems, we need your feedback from using
 > ssdev on Linux or Windows
 
-## Getting Started
-### 🧩 Requirements
+## 🧩 Requirements
 For ssdev to work correctly, you have to install
 * Docker ([installation instructions](https://www.docker.com/products/docker-desktop)) - We recommend to install Docker desktop on Windows, as a native installation under wsl tends to not work correctly.
 * Node & npm *(& npx)* ([installation instructions](https://nodejs.org/en/download/))
@@ -23,7 +22,7 @@ For ssdev to work correctly, you have to install
 > Users on Mac or Windows will have to set up nfs. If it is not working
 > out of the box, follow the steps in [this article](https://firehydrant.io/blog/nfs-with-docker-on-macos-catalina/).
 
-### 📦 Installation
+## 📦 Installation
 You can run ssdev without installing it using npx:
 ```
 npx ssdev --help
@@ -39,7 +38,7 @@ after which you can simply use it by typing
 ssdev --help
 ```
 
-### 🚀 Usage
+## 🚀 Usage
 
 ssdev assumes Silverstripe projects to be inside a directory containing a `composer.json`
 file and a file structure [common for Silverstripe](https://docs.silverstripe.org/en/4/getting_started/directory_structure/).
