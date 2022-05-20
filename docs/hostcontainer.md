@@ -27,9 +27,10 @@ You can add a `package.json` file even if you do not use any node stuff in your 
 
 ## Build your own Container
 When there is no prebuilt container and you do not want to host one, you can
-instruct ssdev to build the host via a custom `docker-compose.yml`. The values
-in this file are merged **over** the internal definition, allowing you
-to customize any aspect of any container.
+instruct ssdev to build the host image (or any other service) via a custom
+`docker-compose.yml`. The values in this file are merged **over** the internal
+definition. This allows you to customize **any** aspect of your development
+environment while still sharing it with your colleagues.
 
 As an example, if you want to build your host container from a `Dockerfile`
 supplied in your project:
@@ -50,6 +51,3 @@ If you have made changes to your `Dockerfile`, you can rebuild it using:
 ```
 ssdev build
 ```
-
-> This is a very powerful tool, allowing you to customize **any** aspect of your
-> development environment while still sharing it with your colleagues.
