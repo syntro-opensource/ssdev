@@ -2,6 +2,26 @@
 ## [Unreleased]
 
 
+<a name="1.2.0"></a>
+## [1.2.0] - 2022-05-20
+### 🍰 Added
+- Enable use of `ssdev up` which is closer to docker-compose
+- Enable interactive sessions for `exec` and `run` via `stdio: 'inherit'` ([#93](https://github.com/syntro-opensource/ssdev/issues/93))
+- `ssdev` config option for package.json files
+
+### 🐞 Fixed
+- fixed security auddit / alerts
+
+### 🔧 Changed
+- Improved documentation
+- `init` command now uses our custom container, not requiring users to ignore platform reqs
+- `init` command uses `syntro/ssto^2`
+- added a custom prefix to dependabot PRs
+
+### 🧬 Dependencies
+- Bump eslint from 7.32.0 to 8.15.0 ([#92](https://github.com/syntro-opensource/ssdev/issues/92))
+
+
 <a name="1.1.1"></a>
 ## [1.1.1] - 2021-09-28
 ### 🐞 Fixed
@@ -94,7 +114,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.1.1...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/syntro-opensource/ssdev/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/syntro-opensource/ssdev/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/syntro-opensource/ssdev/compare/1.0.3...1.1.0
 [1.0.3]: https://github.com/syntro-opensource/ssdev/compare/1.0.2...1.0.3
