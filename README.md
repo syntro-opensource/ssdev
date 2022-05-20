@@ -56,7 +56,7 @@ ssdev down
 There is more to ssdev, but we go over all of it in the [docs](#-docs).
 
 ## 📖 Docs
-ssdev is a powerful tool and can be customized in various ways. Read here, how
+ssdev is a powerful tool and can be customized in various ways. Read here how
 you can achieve any setup, mimicking a production environment as closely as possible.
 
 
@@ -90,3 +90,4 @@ Check out the following for more informations:
 * [Changelog](CHANGELOG.md)
 * [Contributing guide](CONTRIBUTING.md)
 * [License](LICENSE.md)
+* [`syntro/ssto`](https://github.com/syntro-opensource/silverstripe-ssto)
