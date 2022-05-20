@@ -53,7 +53,7 @@ are finished, run
 ```
 ssdev down
 ```
-There is more to ssdev, but we go over all of it in the [docs](#docs).
+There is more to ssdev, but we go over all of it in the [docs](#-docs).
 
 ## 📖 Docs
 ssdev is a powerful tool and can be customized in various ways. Read here, how
