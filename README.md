@@ -10,8 +10,9 @@ or WAMP stack and start developing awesome websites and applications!
 
 > 🚨 **WANTED: Feedback from Windows & Linux users!**
 >
-> ssdev is extensively tested on macOS, as this is what we work on, so feedback
-> from other systems is greatly appreciated.
+> ssdev is extensively tested and developed on macOS, as this is what we work on.
+> To find bugs or problems on other systems, we need your feedback from using
+> ssdev on Linux or Windows
 
 ## Getting Started
 ### 🧩 Requirements
