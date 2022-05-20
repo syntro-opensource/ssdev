@@ -1,4 +1,3 @@
-const compose = require('docker-compose');
 const withComposeConfig = require('../docker/withComposeConfig');
 const execComposeWithTTY = require('../docker/execComposeWithTTY');
 
