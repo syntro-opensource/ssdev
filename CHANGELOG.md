@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.2.2"></a>
+## [1.2.2] - 2022-05-20
+### 🐞 Fixed
+- supress error message
+
+### 🔧 Changed
+- allow dev stability for `init`
+
+
 <a name="1.2.1"></a>
 ## [1.2.1] - 2022-05-20
 ### 🐞 Fixed
@@ -123,7 +132,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.1...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.2...HEAD
+[1.2.2]: https://github.com/syntro-opensource/ssdev/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/syntro-opensource/ssdev/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/syntro-opensource/ssdev/compare/1.1.0...1.1.1
