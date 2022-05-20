@@ -56,7 +56,10 @@ ssdev down
 There is more to ssdev, but we go over all of it in the [docs](#docs).
 
 ## 📖 Docs
-ssdev can be customized in various ways.
+ssdev is a powerful tool and can be customized in various ways. Read here, how
+you can achieve any setup, mimicking a production environment as closely as possible.
+
+
 #### Config Options
 You can set all config options (`ssdev --help`) in a `package.json` file under the
 `ssdev` key. This allows you to set per-project settings that actually transfer
