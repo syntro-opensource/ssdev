@@ -27,6 +27,7 @@ function init(args) {
     args.container,
     'composer',
     'create-project',
+    '--stability=dev',
     '--no-interaction',
   ];
   if (args['ignore-platform-reqs']) {
