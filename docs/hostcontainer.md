@@ -45,8 +45,8 @@ services:
     init: true
 ```
 
-If you use `ssdev up` for the first time, the image should be automatically
-built. If you have made changes to your `Dockerfile`, you can rebuild it using:
+If you use `ssdev up` for the first time, the image should be built automatically.
+If you have made changes to your `Dockerfile`, you can rebuild it using:
 ```
 ssdev build
 ```
