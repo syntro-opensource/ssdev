@@ -1,5 +1,5 @@
-const compose = require('docker-compose');
 const withComposeConfig = require('../docker/withComposeConfig');
+const execComposeWithTTY = require('../docker/execComposeWithTTY');
 
 /**
  * run - runs a command in a container
@@ -10,7 +10,8 @@ const withComposeConfig = require('../docker/withComposeConfig');
 function run(args) {
   withComposeConfig(args, (config) => {
     config.commandOptions.push('--rm');
-    return compose.run(args.container, args['--'], config);
+    const cmdArgs = [args.container].concat(args['--']);
+    return execComposeWithTTY('run', cmdArgs, config);
   });
 }
 module.exports = run;
