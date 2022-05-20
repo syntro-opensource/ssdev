@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="1.2.1"></a>
+## [1.2.1] - 2022-05-20
+### 🐞 Fixed
+- correctly state usage of `run` command in Helptext
+
+### 🗑 Removed
+- composer is no default service anymore
+
+
 <a name="1.2.0"></a>
 ## [1.2.0] - 2022-05-20
 ### 🍰 Added
@@ -114,7 +123,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.1...HEAD
+[1.2.1]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/syntro-opensource/ssdev/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/syntro-opensource/ssdev/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/syntro-opensource/ssdev/compare/1.0.3...1.1.0
