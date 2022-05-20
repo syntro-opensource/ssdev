@@ -13,6 +13,7 @@ function init(args) {
     'run',
     '--rm',
     '-t',
+    '--workdir /app',
     '-v $PWD:/app',
   ];
   if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
@@ -23,6 +24,7 @@ function init(args) {
   }
   command = [
     ...command,
+    args.container,
     'composer',
     'create-project',
     '--no-interaction',

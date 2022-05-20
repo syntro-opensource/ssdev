@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 const commands = require('./commands');
 
+const DEFAULT_CONTAINER = 'syntrocontainer/silverstripe-dev:7.4-apache-buster';
+
 require('yargs') // eslint-disable-line
   .option('image-host', {
     alias: 'h',
     type: 'string',
     description: 'The image of the host container',
-    default: 'brettt89/silverstripe-web:7.4-apache',
+    default: DEFAULT_CONTAINER,
   })
   .option('image-db', {
     alias: 'd',
@@ -142,6 +144,10 @@ require('yargs') // eslint-disable-line
         alias: 'r',
         describe: 'specify the recipe to be used',
         default: 'syntro/ssto:^2',
+        type: 'string',
+      }).option('container', {
+        describe: 'specify the container to be used (must contain a composer installation)',
+        default: DEFAULT_CONTAINER,
         type: 'string',
       }).option('ignore-platform-reqs', {
         type: 'boolean',
