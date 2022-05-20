@@ -162,4 +162,5 @@ require('yargs') // eslint-disable-line
   .scriptName('ssdev')
   .epilogue('provided by Syntro GmbH (https://syntro.ch)')
   .demandCommand()
+  .pkgConf('ssdev')
   .argv;
