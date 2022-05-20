@@ -40,17 +40,17 @@ module.exports = (args) => ({
         '--default-authentication-plugin=mysql_native_password',
       ],
     },
-    composer: {
-      image: 'composer',
-      // restart: 'no',
-      working_dir: '/var/www/html',
-      ...hostUser(args),
-      volumes: [{
-        type: 'volume',
-        source: 'host_data',
-        target: '/var/www/html',
-      }],
-    },
+    // composer: {
+    //   image: 'composer',
+    //   // restart: 'no',
+    //   working_dir: '/var/www/html',
+    //   ...hostUser(args),
+    //   volumes: [{
+    //     type: 'volume',
+    //     source: 'host_data',
+    //     target: '/var/www/html',
+    //   }],
+    // },
   },
   ...volumeDefinition(args),
 });
