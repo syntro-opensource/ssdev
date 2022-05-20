@@ -88,7 +88,7 @@ require('yargs') // eslint-disable-line
 // execute a command inside the host container
   .command(
     'run [container]',
-    'run a command in the desired service container ("host" by default). use like so: "ssdev run composer -- require silverstripe/framework"',
+    'run a command in the desired service container ("host" by default). Specify the command like so: "ssdev run -- composer require silverstripe/framework"',
     (yargs) => {
       yargs
         .positional('container', {
