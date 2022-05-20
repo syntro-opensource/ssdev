@@ -36,8 +36,16 @@ require('yargs') // eslint-disable-line
   })
 // Serve the devenv
   .command(
-    'serve',
+    'up',
     'start the devenv',
+    (yargs) => {}, // eslint-disable-line no-unused-vars
+    (argv) => {
+      commands.serve(argv);
+    },
+  )
+  .command(
+    'serve',
+    'start the devenv (same as up)',
     (yargs) => {}, // eslint-disable-line no-unused-vars
     (argv) => {
       commands.serve(argv);
