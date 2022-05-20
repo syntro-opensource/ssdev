@@ -44,6 +44,9 @@ ssdev assumes Silverstripe projects to be inside a directory containing a `compo
 file and a file structure [common for Silverstripe](https://docs.silverstripe.org/en/4/getting_started/directory_structure/).
 All commands concerning that project **must** be executed in the project root.
 
+If you want to experiment on a new project, have a look over at [`syntro/ssto`](https://github.com/syntro-opensource/silverstripe-ssto)
+to get set up with a Silverstripe starter project.
+
 In a directory containing a project, simply run
 ```
 ssdev up
