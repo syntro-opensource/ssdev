@@ -1,6 +1,6 @@
 const volumeDefinition = require('./volumeDefinition');
 const hostVolumes = require('./hostVolumes');
-const hostUser = require('./hostUser');
+// const hostUser = require('./hostUser');
 const hostEnv = require('./hostEnv');
 
 /**
