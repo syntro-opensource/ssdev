@@ -141,7 +141,7 @@ require('yargs') // eslint-disable-line
       yargs.option('recipe', {
         alias: 'r',
         describe: 'specify the recipe to be used',
-        default: 'syntro/ssto:^1',
+        default: 'syntro/ssto:^2',
         type: 'string',
       }).option('ignore-platform-reqs', {
         type: 'boolean',
