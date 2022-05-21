@@ -1,4 +1,4 @@
-# ssdev - an Integrated Silverstripe Development Environment 🚀
+# ssdev - A Simple yet Powerful Silverstripe Development Environment Manager 🚀
 
 [![npm](https://img.shields.io/npm/v/ssdev)](https://www.npmjs.com/package/ssdev)
 [![npm](https://img.shields.io/npm/dt/ssdev)](https://www.npmjs.com/package/ssdev)
