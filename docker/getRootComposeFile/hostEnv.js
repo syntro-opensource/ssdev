@@ -21,7 +21,7 @@ function hostEnv(args) {
   if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
     env.environment = {
       ...env.environment,
-      APACHE_RUN_USER: 'root',
+      APACHE_RUN_USER: os.userInfo().username,
     };
   }
   return env;
