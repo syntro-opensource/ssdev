@@ -21,7 +21,7 @@ function getVolumeDefinition(args) { // eslint-disable-line no-unused-vars
       },
     },
   };
-  if (os.platform() === 'darwin' || os.platform() === 'win32') {
+  // if (os.platform() === 'darwin' || os.platform() === 'win32') {
     definition.host_data = {
       driver: 'local',
       driver_opts: {
@@ -30,7 +30,7 @@ function getVolumeDefinition(args) { // eslint-disable-line no-unused-vars
         device: ':${PWD}', // eslint-disable-line no-template-curly-in-string
       },
     };
-  }
+  // }
   return { volumes: definition };
 }
 
