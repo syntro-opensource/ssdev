@@ -15,12 +15,12 @@ function hostVolumes(args) { // eslint-disable-line no-unused-vars
       target: '/var/www/html',
     }],
   };
-  // if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
-  //   volumes.volumes = [
-  //     ...volumes.volumes,
-  //     '/etc/passwd:/etc/passwd:ro',
-  //   ];
-  // }
+  if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
+    volumes.volumes = [
+      ...volumes.volumes,
+      '/etc/passwd:/etc/passwd:ro',
+    ];
+  }
   return volumes;
 }
 
