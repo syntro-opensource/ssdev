@@ -41,6 +41,11 @@ function init(args) {
     args.recipe,
     args.path,
   ];
-  execSync(command.join(' '), { stdio: 'inherit' });
+  try {
+    execSync(command.join(' '), { stdio: 'inherit' });
+  } catch (e) {
+    console.log('');
+  }
+
 }
 module.exports = init;
