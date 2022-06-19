@@ -8,9 +8,9 @@ const process = require('process');
  */
 function hostUser(args) { // eslint-disable-line no-unused-vars
   const user = {};
-  if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
-    user.user = 'root';
-  }
+  // if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
+  //   user.user = String(process.getuid());
+  // }
   return user;
 }
 
