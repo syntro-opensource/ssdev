@@ -16,12 +16,12 @@ function init(args) {
     '--workdir /app',
     '-v $PWD:/app',
   ];
-  if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
-    command = [
-      ...command,
-      '-u $(id -u ${USER}):$(id -g ${USER})', // eslint-disable-line no-template-curly-in-string
-    ];
-  }
+  // if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
+  //   command = [
+  //     ...command,
+  //     '-u $(id -u ${USER}):$(id -g ${USER})', // eslint-disable-line no-template-curly-in-string
+  //   ];
+  // }
   command = [
     ...command,
     args.container,
