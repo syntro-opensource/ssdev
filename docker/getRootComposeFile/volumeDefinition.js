@@ -26,7 +26,7 @@ function getVolumeDefinition(args) { // eslint-disable-line no-unused-vars
       driver: 'local',
       driver_opts: {
         type: 'nfs',
-        o: 'addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3',
+        o: 'addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=4',
         device: ':${PWD}', // eslint-disable-line no-template-curly-in-string
       },
     };
