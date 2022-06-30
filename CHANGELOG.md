@@ -2,6 +2,19 @@
 ## [Unreleased]
 
 
+<a name="1.2.3"></a>
+## [1.2.3] - 2022-06-30
+### 🔧 Changed
+- uses oracle image for mysql by default
+
+### 🧬 Dependencies
+- Bump [@syntro](https://github.com/syntro)-opensource/eslint-config-base from 1.0.2 to 1.1.0 ([#99](https://github.com/syntro-opensource/ssdev/issues/99))
+- Bump eslint from 8.16.0 to 8.18.0 ([#102](https://github.com/syntro-opensource/ssdev/issues/102))
+- Bump yaml from 2.1.0 to 2.1.1 ([#98](https://github.com/syntro-opensource/ssdev/issues/98))
+- Bump jest from 28.1.0 to 28.1.2 ([#104](https://github.com/syntro-opensource/ssdev/issues/104))
+- Bump eslint from 8.15.0 to 8.16.0 ([#96](https://github.com/syntro-opensource/ssdev/issues/96))
+
+
 <a name="1.2.2"></a>
 ## [1.2.2] - 2022-05-20
 ### 🐞 Fixed
@@ -132,7 +145,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.2...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.3...HEAD
+[1.2.3]: https://github.com/syntro-opensource/ssdev/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/syntro-opensource/ssdev/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/syntro-opensource/ssdev/compare/1.1.1...1.2.0
