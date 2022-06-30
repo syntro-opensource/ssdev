@@ -1,20 +1,21 @@
 #!/usr/bin/env node
 const commands = require('./commands');
 
-const DEFAULT_CONTAINER = 'syntrocontainer/silverstripe-dev:7.4-apache-buster';
+const DEFAULT_HOST_IMAGE = 'syntrocontainer/silverstripe-dev:7.4-apache-buster';
+const DEFAULT_DB_IMAGE = 'mysql:8-oracle';
 
 require('yargs') // eslint-disable-line
   .option('image-host', {
     alias: 'h',
     type: 'string',
     description: 'The image of the host container',
-    default: DEFAULT_CONTAINER,
+    default: DEFAULT_HOST_IMAGE,
   })
   .option('image-db', {
     alias: 'd',
     type: 'string',
     description: 'The image of the database container',
-    default: 'mysql:8',
+    default: DEFAULT_DB_IMAGE,
   })
   .option('tz', {
     type: 'string',
@@ -147,7 +148,7 @@ require('yargs') // eslint-disable-line
         type: 'string',
       }).option('container', {
         describe: 'specify the container to be used (must contain a composer installation)',
-        default: DEFAULT_CONTAINER,
+        default: DEFAULT_HOST_IMAGE,
         type: 'string',
       }).option('ignore-platform-reqs', {
         type: 'boolean',
