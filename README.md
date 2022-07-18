@@ -19,8 +19,8 @@ For ssdev to work correctly, you have to install
 * Docker ([installation instructions](https://www.docker.com/products/docker-desktop)) - We recommend to install Docker desktop on Windows, as a native installation under wsl tends to not work correctly.
 * Node & npm *(& npx)* ([installation instructions](https://nodejs.org/en/download/))
 
-> Users on Mac or Windows will have to set up nfs. If it is not working
-> out of the box, follow the steps in [this article](https://firehydrant.io/blog/nfs-with-docker-on-macos-catalina/).
+> Users on Mac and Windows will have to set up nfs.
+> → see [📚 Configuring NFS on macOS](docs/nfs/macos.md).
 
 ## 📦 Installation
 You can run ssdev without installing it using npx:
