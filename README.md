@@ -20,6 +20,7 @@ For ssdev to work correctly, you have to install
 * Node & npm *(& npx)* ([installation instructions](https://nodejs.org/en/download/))
 
 > Users on Mac and Windows will have to set up nfs.
+>
 > → see [📚 Configuring NFS on macOS](docs/nfs/macos.md).
 
 ## 📦 Installation
