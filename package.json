@@ -27,6 +27,6 @@
   "devDependencies": {
     "@syntro-opensource/eslint-config-base": "^1.0.2",
     "eslint": "^8.15.0",
-    "jest": "^28.1.0"
+    "jest": "^29.0.2"
   }
 }
