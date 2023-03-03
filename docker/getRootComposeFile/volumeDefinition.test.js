@@ -19,20 +19,40 @@ test('contains a default volumes definition', () => {
   expect('host_data' in definition).toBeTruthy();
 });
 
-test('contains a default mount for linux system', () => {
+test('contains a default mount for all systems by default', () => {
   os.platform.mockReturnValue('linux');
-  const definition = volumeDefinition(args).volumes.host_data;
-  expect(definition.driver).toBe('local');
-  expect(definition.driver_opts).toEqual({
+  const linuxDefinition = volumeDefinition(args).volumes.host_data;
+  expect(linuxDefinition.driver).toBe('local');
+  expect(linuxDefinition.driver_opts).toEqual({
+     type: 'none',
+     o: 'bind',
+     device: '${PWD}',
+   });
+
+   os.platform.mockReturnValue('win32');
+  const winDefinition = volumeDefinition(args).volumes.host_data;
+  expect(winDefinition.driver).toBe('local');
+  expect(winDefinition.driver_opts).toEqual({
+     type: 'none',
+     o: 'bind',
+     device: '${PWD}',
+   });
+
+   os.platform.mockReturnValue('darwin');
+  const darwinDefinition = volumeDefinition(args).volumes.host_data;
+  expect(darwinDefinition.driver).toBe('local');
+  expect(darwinDefinition.driver_opts).toEqual({
      type: 'none',
      o: 'bind',
      device: '${PWD}',
    });
 });
 
-test('does not contain pwd on windows or macOS', () => {
+test('correctly handles nfs on windows or macOS', () => {
   os.platform.mockReturnValue('win32');
-  var definition = volumeDefinition(args).volumes.host_data;
+  var definition = volumeDefinition({
+    'use-nfs': true,
+  }).volumes.host_data;
   expect(definition.driver).toBe('local');
   expect(definition.driver_opts).toEqual({
      type: 'nfs',
@@ -41,7 +61,9 @@ test('does not contain pwd on windows or macOS', () => {
    });
 
   os.platform.mockReturnValue('darwin');
-  definition = volumeDefinition(args).volumes.host_data;
+  definition = volumeDefinition({
+    'use-nfs': true,
+  }).volumes.host_data;
   expect(definition.driver).toBe('local');
   expect(definition.driver_opts).toEqual({
      type: 'nfs',
