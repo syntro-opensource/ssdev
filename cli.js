@@ -64,7 +64,8 @@ require('yargs') // eslint-disable-line
         describe: 'remove volumes',
         type: 'boolean',
       });
-    }, (argv) => {
+    },
+    (argv) => {
       commands.down(argv);
     },
   )
