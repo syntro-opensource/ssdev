@@ -21,7 +21,7 @@ function getVolumeDefinition(args) { // eslint-disable-line no-unused-vars
       },
     },
   };
-  if (os.platform() === 'darwin' || os.platform() === 'win32') {
+  if (args['use-nfs'] && (os.platform() === 'darwin' || os.platform() === 'win32')) {
     definition.host_data = {
       driver: 'local',
       driver_opts: {

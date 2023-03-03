@@ -88,6 +88,24 @@ to other developers. An example would be if you want to use a different PHP vers
 #### Custom Services
 → see [📚 in-depth docs about custom service container](docs/services.md).
 
+#### Using NFS Mount for Host Volume
+
+On macOS or Windows, you may instruct ssdev to mount the host directory via NFS. In the past, this has worked
+well for improving performance, but with the addition of new and faster file-sharing implementations,
+this has become a legacy feature and has been disabled by default in version `1.4.0`.
+
+If you want to re-enable it, simply add the `--use-nfs` flag or add the following to your config:
+```json
+{
+  "ssdev": {
+    "use-nfs": true
+  }
+}
+```
+
+
+→ see [📚 Configuring NFS on macOS](docs/nfs/macos.md).
+
 
 ## ➕ More Infos
 Check out the following for more informations:

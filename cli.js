@@ -37,6 +37,11 @@ require('yargs') // eslint-disable-line
     description: 'Ports to publish from the database container',
     default: ['3306:3306'],
   })
+  .option('use-nfs', {
+    type: 'boolean',
+    description: 'flag to enable nfs mount on macOS or Windows systems',
+    default: false,
+  })
 // Serve the devenv
   .command(
     'up',
