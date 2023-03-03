@@ -1,9 +1,18 @@
 version: 2
 updates:
   - package-ecosystem: npm
+    open-pull-requests-limit: 10
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: Bump
+    assignees:
+      - 'mleutenegger'
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: "monthly"
     commit-message:
       prefix: Bump
     assignees:
