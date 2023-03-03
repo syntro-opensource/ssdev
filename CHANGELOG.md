@@ -2,6 +2,30 @@
 ## [Unreleased]
 
 
+<a name="1.3.0"></a>
+## [1.3.0] - 2023-03-03
+### 🍰 Added
+- Dependabot now manages github actions
+- description on how to enable NFS on macOS
+
+### 🔧 Changed
+- Updated Node.js version in actions to 18
+
+### 🗑 Removed
+- NFS is not enabled by default
+
+### 🧬 Dependencies
+- Bump jest from 28.1.3 to 29.4.3 ([#147](https://github.com/syntro-opensource/ssdev/issues/147))
+- Bump yargs from 17.5.1 to 17.7.1 ([#149](https://github.com/syntro-opensource/ssdev/issues/149))
+- Bump eslint from 8.20.0 to 8.35.0 ([#150](https://github.com/syntro-opensource/ssdev/issues/150))
+- Bump actions/checkout from 2 to 3 ([#151](https://github.com/syntro-opensource/ssdev/issues/151))
+- Bump docker-compose from 0.23.17 to 0.23.19 ([#152](https://github.com/syntro-opensource/ssdev/issues/152))
+- Bump yaml from 2.1.1 to 2.2.1 ([#139](https://github.com/syntro-opensource/ssdev/issues/139))
+- Bump [@syntro](https://github.com/syntro)-opensource/eslint-config-base from 1.1.0 to 1.1.2 ([#117](https://github.com/syntro-opensource/ssdev/issues/117))
+- Bump jest from 28.1.2 to 28.1.3 ([#106](https://github.com/syntro-opensource/ssdev/issues/106))
+- Bump eslint from 8.18.0 to 8.20.0 ([#107](https://github.com/syntro-opensource/ssdev/issues/107))
+
+
 <a name="1.2.3"></a>
 ## [1.2.3] - 2022-06-30
 ### 🔧 Changed
@@ -145,7 +169,8 @@
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.2.3...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/1.3.0...HEAD
+[1.3.0]: https://github.com/syntro-opensource/ssdev/compare/1.2.3...1.3.0
 [1.2.3]: https://github.com/syntro-opensource/ssdev/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/syntro-opensource/ssdev/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/syntro-opensource/ssdev/compare/1.2.0...1.2.1

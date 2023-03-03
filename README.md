@@ -92,7 +92,7 @@ to other developers. An example would be if you want to use a different PHP vers
 
 On macOS or Windows, you may instruct ssdev to mount the host directory via NFS. In the past, this has worked
 well for improving performance, but with the addition of new and faster file-sharing implementations,
-this has become a legacy feature and has been disabled by default in version `1.4.0`.
+this has become a legacy feature and has been disabled by default in version `1.3.0`.
 
 If you want to re-enable it, simply add the `--use-nfs` flag or add the following to your config:
 ```json
