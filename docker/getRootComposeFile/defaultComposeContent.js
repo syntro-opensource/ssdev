@@ -9,7 +9,6 @@ const hostEnv = require('./hostEnv');
  * flags on the command
  */
 module.exports = (args) => ({
-  version: '3.7',
   services: {
     host: {
       image: args['image-host'],

@@ -30,8 +30,8 @@ function execComposeWithTTY(command, args, options) {
 
     const { cwd } = options;
     const env = options.env || undefined;
-    const executablePath = options.executablePath || 'docker-compose';
-
+    const executablePath = options.executablePath || 'docker';
+    composeArgs = ['compose', ...composeArgs];
     const childProc = childProcess.spawn(executablePath, composeArgs, {
       cwd,
       env,
@@ -39,6 +39,7 @@ function execComposeWithTTY(command, args, options) {
     });
 
     childProc.on('error', (err) => {
+      console.log(err);
       reject(err);
     });
     childProc.on('exit', (exitCode) => {

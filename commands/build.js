@@ -1,4 +1,4 @@
-const compose = require('docker-compose');
+const { v2: compose } = require('docker-compose');
 const withComposeConfig = require('../docker/withComposeConfig');
 
 /**
