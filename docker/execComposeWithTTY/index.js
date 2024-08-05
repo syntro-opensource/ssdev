@@ -39,7 +39,6 @@ function execComposeWithTTY(command, args, options) {
     });
 
     childProc.on('error', (err) => {
-      console.log(err);
       reject(err);
     });
     childProc.on('exit', (exitCode) => {
