@@ -19,7 +19,7 @@
   "author": "Matthias Leutenegger",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "docker-compose": "^0.24.1",
+    "docker-compose": "^1.0.0",
     "tmp": "^0.2.1",
     "yaml": "^2.1.0",
     "yargs": "^17.5.1"
