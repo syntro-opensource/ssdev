@@ -8,20 +8,12 @@
 ssdev makes Silverstripe development easy. Stop worrying about your LAMP, MAMP
 or WAMP stack and start developing awesome websites and applications!
 
-> 🚨 **WANTED: Feedback from Windows & Linux users!**
->
-> ssdev is extensively tested and developed on macOS, as this is what we work on.
-> To find bugs or problems on other systems, we need your feedback from using
-> ssdev on Linux or Windows
+## 🧩 Prerequisites
+ssdev works on most systems. In order for it to work properly, you need to install some prerequisites. Please follow the instructions for your OS:
 
-## 🧩 Requirements
-For ssdev to work correctly, you have to install
-* Docker ([installation instructions](https://www.docker.com/products/docker-desktop)) - We recommend to install Docker desktop on Windows, as a native installation under wsl tends to not work correctly.
-* Node & npm *(& npx)* ([installation instructions](https://nodejs.org/en/download/))
-
-> Users on Mac and Windows will have to set up nfs.
->
-> → see [📚 Configuring NFS on macOS](docs/nfs/macos.md).
+* [macOS](docs/os/macos.md)
+* [Windows](docs/os/windows.md)
+* [Linux](docs/os/linux.md)
 
 ## 📦 Installation
 You can run ssdev without installing it using npx:
