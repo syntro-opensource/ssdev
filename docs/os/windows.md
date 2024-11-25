@@ -14,3 +14,7 @@ The best approach is treating the WSL distro as a remote server and using it to 
 This means that it is best practice to use git inside the distro. You can open any project in VSCode 
 by typing `code .` in the respective directory.
 
+> **Known Issue with Docker**: ssdev uses bind mounts for the host data (the web directory), but it seems like there is a
+> problem remounting these mounts after a restart of your computer. The quickfix is rather simple: delete the 
+> `<project>_host_data` volume using the GUI or the docker command in WSL. After that, `ssdev up` will work correctly
+> again.
