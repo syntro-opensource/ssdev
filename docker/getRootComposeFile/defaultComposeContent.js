@@ -36,7 +36,7 @@ module.exports = (args) => ({
         target: '/var/lib/mysql',
       }],
       command: [
-        '--default-authentication-plugin=mysql_native_password',
+        '--mysql-native-password=ON',
       ],
     },
     // composer: {
