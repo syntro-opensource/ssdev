@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="2.2.0"></a>
+## [2.2.0] - 2025-01-27
+### 🗑 Removed
+- NFS setting ([#190](https://github.com/syntro-opensource/ssdev/issues/190))
+
+
 <a name="2.1.0"></a>
 ## [2.1.0] - 2025-01-27
 ### 🍰 Added
@@ -197,7 +203,8 @@ does only work with compose v2
 - initial release
 
 
-[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/syntro-opensource/ssdev/compare/2.2.0...HEAD
+[2.2.0]: https://github.com/syntro-opensource/ssdev/compare/2.1.0...2.2.0
 [2.1.0]: https://github.com/syntro-opensource/ssdev/compare/2.0.0...2.1.0
 [2.0.0]: https://github.com/syntro-opensource/ssdev/compare/1.4.0...2.0.0
 [1.4.0]: https://github.com/syntro-opensource/ssdev/compare/1.3.0...1.4.0

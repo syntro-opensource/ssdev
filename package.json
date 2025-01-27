@@ -1,6 +1,6 @@
 {
   "name": "ssdev",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "docker-based devenv manager for silverstripe projects using npx",
   "main": "index.js",
   "scripts": {
