@@ -13,11 +13,7 @@ const args = {};
 test('contains a default volumes definition', () => {
   expect('volumes' in hostVolumes(args)).toBeTruthy();
   const volumes = hostVolumes(args).volumes;
-  expect(volumes).toContainEqual({
-    type: 'volume',
-    source: 'host_data',
-    target: '/var/www/html',
-  });
+  expect(volumes).toContainEqual('${PWD}:/var/www/html');
 });
 
 test('contains pwd on linux', () => {

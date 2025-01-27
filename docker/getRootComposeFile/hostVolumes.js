@@ -9,11 +9,14 @@ const os = require('os');
  */
 function hostVolumes(args) { // eslint-disable-line no-unused-vars
   const volumes = {
-    volumes: [{
-      type: 'volume',
-      source: 'host_data',
-      target: '/var/www/html',
-    }],
+    volumes: [
+      '${PWD}:/var/www/html', // eslint-disable-line no-template-curly-in-string
+    ],
+    // volumes: [{
+    //   type: 'volume',
+    //   source: 'host_data',
+    //   target: '/var/www/html',
+    // }],
   };
   if (os.platform() !== 'darwin' && os.platform() !== 'win32') {
     volumes.volumes = [
