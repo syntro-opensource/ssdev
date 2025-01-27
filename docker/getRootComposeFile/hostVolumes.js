@@ -10,8 +10,8 @@ const os = require('os');
 function hostVolumes(args) { // eslint-disable-line no-unused-vars
   const volumes = {
     volumes: [
-      '${PWD}:/var/www/html',
-    ]
+      '${PWD}:/var/www/html', // eslint-disable-line no-template-curly-in-string
+    ],
     // volumes: [{
     //   type: 'volume',
     //   source: 'host_data',
