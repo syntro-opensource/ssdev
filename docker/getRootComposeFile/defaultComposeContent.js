@@ -39,17 +39,6 @@ module.exports = (args) => ({
         '--mysql-native-password=ON',
       ],
     },
-    // composer: {
-    //   image: 'composer',
-    //   // restart: 'no',
-    //   working_dir: '/var/www/html',
-    //   ...hostUser(args),
-    //   volumes: [{
-    //     type: 'volume',
-    //     source: 'host_data',
-    //     target: '/var/www/html',
-    //   }],
-    // },
   },
   ...volumeDefinition(args),
 });
